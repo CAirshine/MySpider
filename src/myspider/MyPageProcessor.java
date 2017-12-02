@@ -23,6 +23,7 @@ public class MyPageProcessor implements PageProcessor {
 	}
 
 	public static void main(String[] args) {
+		
 		Spider.create(new MyPageProcessor()).addUrl("https://www.qiushibaike.com/hot/").thread(5).run();
 	}
 }
