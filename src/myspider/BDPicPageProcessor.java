@@ -49,7 +49,7 @@ public class BDPicPageProcessor implements PageProcessor {
 			String md5 = Utils.getMd5ByFile(file);
 			if (treeMap.get(md5) != null) {
 				System.gc();
-				System.out.println("删除重复文件	" + file.delete());
+				System.out.println("删除重复文件	" + file.getName() + " " + file.delete());
 			} else {
 				treeMap.put(md5, "");
 			}
@@ -225,6 +225,7 @@ public class BDPicPageProcessor implements PageProcessor {
 					+ "&rn=30&gsm=1e&1512303435036=";
 
 			Spider.create(new BDPicPageProcessor(key)).addUrl(url).run();
+			//Spider.create(new BDPicPageProcessor(key));
 		}
 	}
 }
