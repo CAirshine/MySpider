@@ -15,7 +15,7 @@ import us.codecraft.webmagic.processor.PageProcessor;
 
 public class QBPageProcessor implements PageProcessor {
 
-	private Site site = Site.me().setRetryTimes(3).setSleepTime(100);
+	private Site site = Site.me().setRetryTimes(3).setSleepTime(10);
 
 	private TreeMap<String, String> map = new TreeMap<String, String>();
 	private String url = "";
